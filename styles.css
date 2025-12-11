@@ -1,0 +1,13 @@
+#myCarousel {
+    margin-top: 56px;
+}
+
+#myCarousel, .carousel-item {
+    min-height: calc(100vh - 56px) !important;    
+}
+
+.carousel-item > img {
+    width: 100%;
+    height: calc(100vh - 56px);
+    object-fit: cover;
+}
