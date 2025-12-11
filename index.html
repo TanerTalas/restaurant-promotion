@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -12,13 +12,13 @@
 
 <body>
     <!-- Navigation - Start -->
-    <nav class="navbar navbar-expand-md d-md-flex fixed-top bg-light">
+    <nav class="navbar navbar-expand-md d-md-flex fixed-top bg-dark">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
                 aria-label="Toggle navigation" data-bs-target="#navbar-links">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand col-md-auto order-md-1 me-0" href="#">Paris Beaubourg</a>
+            <a class="navbar-brand col-md-3 order-md-1 me-0" href="#">Paris Beaubourg</a>
             <div class="collapse d-md-flex col-12 col-md-6 justify-content-center order-3 order-md-2" id="navbar-links">
                 <ul class="navbar-nav flex-row justify-content-around">
                     <li class="nav-item"> <a class="nav-link active" aria-current="page" href="#">Home</a> </li>
@@ -26,9 +26,9 @@
                     <li class="nav-item"> <a class="nav-link" href="#">Menu</a> </li>
                 </ul>
             </div>
-            <div class="d-md-flex col-md-auto justify-content-md-end order-md-3">
-                <button class="btn btn-dark">
-                    Reservation
+            <div class="d-md-flex col-md-3 justify-content-md-end order-md-3">
+                <button class="btn btn-light ls-2 fw-semibold">
+                    BOOK
                 </button>
             </div>
         </div>
@@ -52,7 +52,7 @@
             <div class="carousel-item">
                 <img src="./images/slide-1.jpg" alt="Restaurant image">
                 <div class="container">
-                    <div class="carousel-caption text-start">
+                    <div class="carousel-caption text-start text-white">
                         <h1 class="fs-1 fw-semibold text-shadow">Paris Beaubourg<small
                                 class="fs-6 text-light fst-italic d-none d-md-inline">Timeless Parisian Elegance</small>
                         </h1>
@@ -65,7 +65,7 @@
             <div class="carousel-item active">
                 <img src="./images/slide-2.jpg" alt="Food image">
                 <div class="container">
-                    <div class="carousel-caption">
+                    <div class="carousel-caption text-white">
                         <h2 class="fs-1 fw-semibold text-shadow">See Our Menu</h2>
                         <p class="fs-5 fw-light text-shadow">Enjoy a collection of dishes inspired by the heart of
                             Paris.</p>
@@ -76,7 +76,7 @@
             <div class="carousel-item">
                 <img src="./images/slide-3.jpg" alt="Chef image">
                 <div class="container">
-                    <div class="carousel-caption text-end">
+                    <div class="carousel-caption text-end text-white">
                         <h2 class="fs-1 fw-semibold text-shadow">From the Chef’s Hands</h2>
                         <p class="fs-5 fw-light text-shadow">Experience the craftsmanship and passion behind every dish.
                         </p>
@@ -97,7 +97,15 @@
     <!-- Hero - End -->
 
     <!-- Short-link to reservation - Start -->
-
+    <div class="bg-darker-dark container-fluid py-4 px-0">
+        <div class="text-center bg-dark shadow-lg px-4">
+            <div class="py-5 sd-color-first">
+                <h3 class="fs-2 ls-2 fw-bold">Reserve Your Experience</h3>
+                <p class="">Secure your spot and enjoy an unforgettable dining experience.</p>
+                <button class="btn btn-light ls-2 px-3 fw-semibold">BOOK</button>
+            </div>
+        </div>
+    </div>
     <!-- Short-link to reservation - End -->
 
     <!-- Menu - Start -->
