@@ -1,27 +1,53 @@
-#myCarousel {
+#myCarousel1 {
     margin-top: 56px;
 }
 
-#myCarousel, .carousel-item {
-    min-height: calc(100vh - 56px) !important;    
+#myCarousel1,
+.carousel-item {
+    height: calc(100vh - 56px);
 }
 
-.carousel-item > img {
+.carousel-item>img {
     width: 100%;
-    height: calc(100vh - 56px);
+    height: 100%;
     object-fit: cover;
 }
 
+@media (max-width: 1199.98px) {
+    #myCarousel2, #myCarousel2 .carousel-item {
+        height: 50vh;
+    }
+
+    .rest-prom-row >  div:nth-child(3) {
+        height: calc(50vh - 56px);
+    }
+}
+
 .text-shadow {
-    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 /* Letter spacing - start */
-.ls-1 { letter-spacing: 1px; }
-.ls-2 { letter-spacing: 2px; }
-.ls-3 { letter-spacing: 3px; }
-.ls-4 { letter-spacing: 4px; }
-.ls-5 { letter-spacing: 5px; }
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+.ls-2 {
+    letter-spacing: 2px;
+}
+
+.ls-3 {
+    letter-spacing: 3px;
+}
+
+.ls-4 {
+    letter-spacing: 4px;
+}
+
+.ls-5 {
+    letter-spacing: 5px;
+}
+
 /* Letter spacing - end */
 
 /* ---------------------- Short divs - start ---------------------- */
@@ -30,6 +56,7 @@
 .sd-color-first {
     color: #bcb5b1;
 }
+
 /* Short divs color - end */
 
 /* ---------------------- Short divs - end ---------------------- */
@@ -38,4 +65,5 @@
 .bg-darker-dark {
     background-color: rgb(33, 34, 38);
 }
+
 /* Background colors - end */
