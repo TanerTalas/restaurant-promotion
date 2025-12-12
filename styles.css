@@ -1,3 +1,9 @@
+.playfair-display-font {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 #myCarousel1 {
     margin-top: 56px;
 }
@@ -53,7 +59,8 @@
 /* ---------------------- Short divs - start ---------------------- */
 
 /* Short divs color - start */
-.sd-color-first {
+
+.sd-color-second {
     color: #bcb5b1;
 }
 
@@ -62,6 +69,10 @@
 /* ---------------------- Short divs - end ---------------------- */
 
 /* Background colors - start */
+.bg-header {
+    background-color: #2e2f33;
+}
+
 .bg-darker-dark {
     background-color: rgb(33, 34, 38);
 }
