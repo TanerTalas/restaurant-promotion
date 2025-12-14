@@ -1,16 +1,29 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const lenis = new Lenis({
-    duration: 1.9,          // scroll yavaşlığı
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    smooth: true,
-    smoothTouch: false,
-    wheelMultiplier: 0.3,
-  });
+ const sections = document.querySelectorAll(
+    '#about-us-container, #menu-container, #myCarousel1'
+  )
 
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
+  const navLinks = document.querySelectorAll('.nav-link')
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => link.classList.remove('active'))
+
+        const activeLink = document.querySelector(
+          `.nav-link[href="#${entry.target.id}"]`
+        )
+
+        if (activeLink) {
+          activeLink.classList.add('active')
+        }
+      }
+    })
+  },
+  {
+    rootMargin: '-30% 0px -50% 0px',
+    threshold: 0,
   }
+)
 
-  requestAnimationFrame(raf);
-});
+  sections.forEach(section => observer.observe(section))
