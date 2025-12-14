@@ -36,7 +36,6 @@
 
             requestAnimationFrame(raf)
 
-            // 🔥 CLICK FIX
             document.addEventListener('click', (e) => {
                 const link = e.target.closest('a')
                 if (!link) return
@@ -141,10 +140,10 @@
     <!-- Short welcome - Start -->
     <div class="text-center bg-header shadow-lg container-fluid">
         <div class="py-5 sd-color-first">
-            <h4 class="display-5 ls-3 fw-semibold pb-1 playfair-display-font">Paris Beaubourg</h4>
+            <h3 class="display-5 ls-3 fw-semibold pb-1 playfair-display-font">Paris Beaubourg</h3>
             <p class="fs-3 fw-light fst-italic ls-1 opacity-75">“A welcoming café experience inspired by everyday Paris
                 life.”</p>
-            <a class="btn btn-outline-light ls-2 px-3 fw-semibold" href="#about-us-container">DISCOVER</a>
+            <a class="btn btn-outline-light btn-lg ls-2 px-3 fw-semibold" href="#about-us-container">DISCOVER</a>
         </div>
     </div>
     <!-- Short welcome - End -->
@@ -154,7 +153,7 @@
     </div>
 
     <!-- About us - Start -->
-    <div class="container-fluid" id="about-us-container">
+    <div class="container-fluid bg-dark" id="about-us-container">
         <div class="container-xxl py-5">
             <div class="row about-row g-0">
 
@@ -219,7 +218,35 @@
     </div>
 
     <!-- Chefs - Start -->
+    <div class="container-fluid bg-chefs" id="about-us-container">
+        <div class="container-xxl py-5">
+            <div class="row justify-content-around text-center ">
 
+                <div class="col-12 mb-3">
+                    <h3 class="display-5 ls-2 fw-semibold py-2 playfair-display-font text-center">Our Chefs</h3>
+                </div>
+
+                <div class="col-md-6 mb-4 mb-md-0 px-3 px-md-5">
+                    <img src="./images/chef-2.png" alt="Chef image"
+                        style="border-radius: 50%; width: 180px; height: 180px;" class="border border-secondary mb-2">
+                    <h4 class="fw-medium fs-2 playfair-display-font">Lucien Beaumont</h4>
+                    <p class="fs-4 fw-light mb-1">Head Chef</p>
+                    <p class="fw-light text-white">Awarded <span
+                            class="playfair-display-font text-light fw-medium">Rising Chef of Paris</span>, 2018</p>
+                </div>
+
+                <div class="col-md-6 px-3 px-md-5">
+                    <img src="./images/chef-1.png" alt="Chef image"
+                        style="border-radius: 50%; width: 180px; height: 180px;" class="border border-secondary mb-2">
+                    <h4 class="fw-medium fs-2 playfair-display-font">Marc Delacroix</h4>
+                    <p class="fs-4 fw-light mb-1">Executive Chef</p>
+                    <p class="fw-light text-white">Winner of <span
+                            class="playfair-display-font text-light fw-medium">Artisan Chef Award</span>, 2016</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <!-- Chefs - End -->
 
     <!-- cut -->
@@ -227,7 +254,14 @@
     </div>
 
     <!-- Menu - Start -->
-
+    <div class="text-center bg-white shadow-lg container-fluid">
+        <div class="py-5 sd-color-third">
+            <h3 class="display-6 ls-3 fw-semibold pb-1 playfair-display-font">Taste Our Menu</h3>
+            <p class="fs-3 fw-light fst-italic ls-1 opacity-75">Take a look at what our chefs and café have to offer.
+            </p>
+            <a class="btn btn-outline-dark btn-lg ls-2 px-3 fw-semibold" href="#about-us-container">MENU</a>
+        </div>
+    </div>
     <!-- Menu - End -->
 
     <!-- cut -->
@@ -261,10 +295,7 @@
                 <div class="col-xl-6 flex-column justify-content-center p-4 text-center order-xl-2 d-none d-xl-flex">
                     <h3 class="display-5 ls-2 fw-semibold pb-2 playfair-display-font">Book Your Experience</h3>
                     <p class="fs-3 fw-light ls-1 opacity-75">Secure your table in just a moment and enjoy exceptional
-                        dining
-                        crafted by
-                        our
-                        chefs.</p>
+                        dining crafted by our chefs.</p>
                 </div>
                 <!-- RIGHT DIV - End -->
 
@@ -289,7 +320,8 @@
     <div class="text-center bg-dark shadow-lg container-fluid d-none d-xl-block">
         <div class="py-5 sd-color-second container">
             <h4 class="display-6 ls-2 fw-medium playfair-display-font">Reserve Your Experience</h4>
-            <p class="fs-3 fw-light opacity-75">Secure your spot and enjoy an unforgettable dining experience.</p>
+            <p class="fs-3 fw-light opacity-75">Secure your spot and enjoy an unforgettable dining experience.
+            </p>
             <button class="btn btn-danger ls-2 px-3 fw-semibold">BOOK</button>
         </div>
     </div>

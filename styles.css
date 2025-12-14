@@ -45,6 +45,10 @@
     background-color: rgb(33, 34, 38);
 }
 
+.bg-chefs {
+    background-color: rgb(48, 50, 55);
+}
+
 /* Background colors - end */
 
 /* Short divs - colors */
@@ -54,6 +58,10 @@
 
 .sd-color-second {
     color: #bcb5b1;
+}
+
+.sd-color-third {
+    color: #77726c;
 }
 
 /* Short divs - end */
@@ -87,6 +95,7 @@
 
 
 
+/* ----------- About us - Start ----------- */
 .about-row>div:not(:first-child) {
     height: 50vh;
 }
@@ -96,6 +105,8 @@
     height: 50vh;
     object-fit: cover;
 }
+
+/* ----------- About us - End ----------- */
 
 @media (max-width: 767.98px) {
     .about-row>div:not(:first-child) {
@@ -110,7 +121,6 @@
 }
 
 @media (max-width: 1199.98px) {
-
     #myCarousel2,
     #myCarousel2 .carousel-item {
         height: 50vh;
