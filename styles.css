@@ -77,6 +77,18 @@ img {
 
 /* Short divs - end */
 
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px); /* hafif aşağıdan */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ----------- general settings - End ----------- */
 
 

@@ -1,8 +1,8 @@
- const sections = document.querySelectorAll(
-    '#about-us-container, #menu-container, #myCarousel1'
-  )
+const sections = document.querySelectorAll(
+  '#about-us-container, #menu-container, #myCarousel1'
+)
 
-  const navLinks = document.querySelectorAll('.nav-link')
+const navLinks = document.querySelectorAll('.nav-link')
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -26,4 +26,23 @@ const observer = new IntersectionObserver(
   }
 )
 
-  sections.forEach(section => observer.observe(section))
+sections.forEach(section => observer.observe(section))
+
+const fadeElements = document.querySelectorAll('.fade-up')
+
+const observer2 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show')
+        observer.unobserve(entry.target) // 🔥 bir kere çalışsın
+      }
+    })
+  },
+  {
+    threshold: 0.2,          // %20 görünür olunca başlasın
+    rootMargin: '0px 0px -50px 0px' // çok erken tetiklenmesin
+  }
+)
+
+fadeElements.forEach(el => observer2.observe(el))
