@@ -144,6 +144,35 @@ img {
 
 
 
+/* ----------- Contact Us - Start ----------- */
+input {
+    text-align: center;
+    background-color: white;
+}
+#name, #surname {
+    max-width: 160px;
+}
+
+#email, #phone, #message {
+    max-width: 300px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+-webkit-box-shadow: 0 0 0 1000px #212529 inset !important;
+-webkit-text-fill-color: #fff !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* ----------- Contact Us - End ----------- */
+
+
+
+
+
 /* ----------- Footer - Start ----------- */
 .portfolio-link {
     transition: 0.4s;
