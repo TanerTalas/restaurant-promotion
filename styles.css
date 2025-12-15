@@ -96,7 +96,7 @@ img {
 
 
 /* ----------- Carousels - Start ----------- */
-#myCarousel1 {
+#myCarousel1, #info-container {
     margin-top: 56px;
 }
 
@@ -129,6 +129,17 @@ img {
 }
 
 /* ----------- About us - End ----------- */
+
+
+
+
+/* ----------- Info - Start ----------- */
+#info-container {
+    background-color: #821427;
+}
+
+/* ----------- Info - End ----------- */
+
 
 
 
