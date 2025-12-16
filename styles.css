@@ -20,6 +20,16 @@ img {
     pointer-events: none;
 }
 
+.btn-primary {
+    background-color: #090084;
+    border-color: #090084;    
+}
+
+.btn-info {
+    background-color: #006e84;
+    border-color: #006e84;
+}
+
 /* Letter spacing - start */
 .ls-1 {
     letter-spacing: 1px;
@@ -58,6 +68,10 @@ img {
 
 .bg-footer {
     background-color: #19191b;
+}
+
+#info-container {
+    background-color: rgb(103, 0, 17);
 }
 
 /* Background colors - end */
@@ -133,20 +147,9 @@ img {
 
 
 
-/* ----------- Info - Start ----------- */
-#info-container {
-    background-color: #821427;
-}
-
-/* ----------- Info - End ----------- */
-
-
-
-
 
 /* ----------- Contact Us - Start ----------- */
 .info-hero-container {
-
     height: 30vh;
 }
 
