@@ -8,7 +8,11 @@
 #about-us-container,
 #chefs-container,
 #menu-container,
-#myCarousel1, #breakfast, #hot-drinks, #desserts, #main-course {
+#myCarousel1,
+#breakfast,
+#hot-drinks,
+#desserts,
+#main-course {
     scroll-margin-top: 56px;
 }
 
@@ -217,13 +221,16 @@ select:-webkit-autofill {
 }
 
 .menu-categories .nav-link.active {
-    background-color: #f8f9fa;
+    background: linear-gradient(to right,
+            #f8f9fa 0%,
+            #ffffff 100%);
     border-left-color: #d40000;
     font-weight: 700 !important;
     color: #222;
 }
 
-#hot-drinks>div:nth-of-type(even),#breakfast>div:nth-of-type(even) {
+#hot-drinks>div:nth-of-type(even),
+#breakfast>div:nth-of-type(even) {
     background-color: rgb(250, 250, 250);
 }
 
@@ -231,10 +238,6 @@ select:-webkit-autofill {
     width: 100%;
     height: 290px;
     object-fit: cover;
-}
-
-.menu-navigation .nav-link {
-    color: black;
 }
 
 /* ----------- Menu - End ----------- */
