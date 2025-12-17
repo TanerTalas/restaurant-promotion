@@ -1,3 +1,4 @@
+// main page nav observer
 const sections = document.querySelectorAll(
   '#about-us-container, #menu-container, #myCarousel1'
 )
@@ -28,6 +29,41 @@ const observer = new IntersectionObserver(
 
 sections.forEach(section => observer.observe(section))
 
+// menu observer
+document.addEventListener('DOMContentLoaded', () => {
+
+  const sections = document.querySelectorAll(
+    '#hot-drinks, #breakfast, #main-course, #desserts'
+  )
+
+  const navLinks = document.querySelectorAll('.menu-categories .nav-link')
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+
+          navLinks.forEach(link => link.classList.remove('active'))
+
+          const activeLink = document.querySelector(
+            `.menu-categories .nav-link[href="#${entry.target.id}"]`
+          )
+
+          if (activeLink) {
+            activeLink.classList.add('active')
+          }
+        }
+      })
+    },
+    {
+      threshold: 0.6,
+    }
+  )
+
+  sections.forEach(section => observer.observe(section))
+})
+
+// Fade up efekt
 const fadeElements = document.querySelectorAll('.fade-up')
 
 const observer2 = new IntersectionObserver(
@@ -35,7 +71,7 @@ const observer2 = new IntersectionObserver(
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show')
-        observer.unobserve(entry.target) // 🔥 bir kere çalışsın
+        observer.unobserve(entry.target)
       }
     })
   },
