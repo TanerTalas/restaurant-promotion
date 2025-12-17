@@ -12,6 +12,12 @@
     scroll-margin-top: 56px;
 }
 
+#myCarousel1,
+.info-hero-container,
+#menupage-menu-container {
+    margin-top: 56px;
+}
+
 .text-shadow {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
@@ -22,7 +28,7 @@ img {
 
 .btn-primary {
     background-color: #090084;
-    border-color: #090084;    
+    border-color: #090084;
 }
 
 .btn-info {
@@ -92,15 +98,16 @@ img {
 /* Short divs - end */
 
 .fade-up {
-  opacity: 0;
-  transform: translateY(24px); /* hafif aşağıdan */
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  will-change: opacity, transform;
+    opacity: 0;
+    transform: translateY(24px);
+    /* hafif aşağıdan */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
 }
 
 .fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ----------- general settings - End ----------- */
@@ -109,10 +116,7 @@ img {
 
 
 
-/* ----------- Carousels - Start ----------- */
-#myCarousel1, .info-hero-container {
-    margin-top: 56px;
-}
+/* ----------- Main Page - Start ----------- */
 
 #myCarousel1,
 .carousel-item {
@@ -125,13 +129,6 @@ img {
     object-fit: cover;
 }
 
-/* ----------- Carousels - End ----------- */
-
-
-
-
-
-/* ----------- About us - Start ----------- */
 .about-row>div:not(:first-child) {
     height: 50vh;
 }
@@ -142,7 +139,7 @@ img {
     object-fit: cover;
 }
 
-/* ----------- About us - End ----------- */
+/* ----------- Main Page - End ----------- */
 
 
 
@@ -164,11 +161,15 @@ input {
     text-align: center;
     background-color: white;
 }
-#name, #surname {
+
+#name,
+#surname {
     max-width: 160px;
 }
 
-#email, #phone, #message {
+#email,
+#phone,
+#message {
     max-width: 300px;
 }
 
@@ -177,12 +178,58 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
--webkit-box-shadow: 0 0 0 1000px #212529 inset !important;
--webkit-text-fill-color: #fff !important;
-  transition: background-color 9999s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0 1000px #212529 inset !important;
+    -webkit-text-fill-color: #fff !important;
+    transition: background-color 9999s ease-in-out 0s;
 }
 
 /* ----------- Contact Us - End ----------- */
+
+
+
+
+
+/* ----------- Menu - Start ----------- */
+#menupage-menu-container {
+    height: 30vh;
+}
+
+#menupage-menu-container img {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.menu-sidebar {
+    position: sticky;
+    top: 56px;
+}
+
+.menu-categories .nav-link {
+    color: #212529;
+    border-left: 3px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.menu-categories .nav-link:hover {
+    color: #000;
+}
+
+.menu-categories .nav-link.active {
+    background-color: #f8f9fa;
+    border-left-color: #d40000;
+    font-weight: 700 !important;
+    color: #222;
+}
+
+#hot-drinks>div:nth-of-type(even) {
+    background-color: rgb(250, 250, 250);
+}
+
+
+
+/* ----------- Menu - End ----------- */
 
 
 
