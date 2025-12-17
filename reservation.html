@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -45,9 +45,130 @@
             })
         }
     </script>
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Font (opsiyonel ama önerilir) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Navigation - Start -->
+    <nav class="navbar navbar-expand-md d-md-flex fixed-top bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
+                aria-label="Toggle navigation" data-bs-target="#navbar-links">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand col-md-3 order-md-1 me-0 playfair-display-font ls-2" href="./index.html">Paris
+                Beaubourg</a>
+            <div class="collapse d-md-flex col-12 col-md-6 justify-content-center order-3 order-md-2" id="navbar-links">
+                <ul class="navbar-nav flex-row justify-content-evenly">
+                    <li class="nav-item"> <a class="nav-link" aria-current="page" href="./index.html">Homepage</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="./contact-us.html">Contact Us</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="./menu.html">Menu</a> </li>
+                </ul>
+            </div>
+            <div class="d-md-flex col-md-3 justify-content-md-end order-md-3">
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation - End -->
+
+    <!-- Hero - start -->
+    <div class="info-hero-container">
+        <img src="./images/dining-1.png" alt="Restaurant Image" class="info-image">
+    </div>
+
+    <section class="container-fluid py-5 text-center bg-white" id="book-container">
+        <h1 class="display-5 ls-3 fw-semibold pb-1 playfair-display-font text-dark">Book a Table</h1>
+        <p class="fs-3 fw-light opacity-75 text-dark">Secure your spot and enjoy an unforgettable dining experience.
+        </p>
+    </section>
+
+    <!-- Hero - end -->
+
+    <!-- Book - start -->
+
+    <section class="container-fluid reservation-calendar bg-white pb-5">
+        <h3 class="fs-3 ls-1 mb-3 text-dark fw-normal text-center">Select a Date</h3>
+
+        <form class="book-form text-dark p-2">
+            <input type="text" id="reservation-date" style="display: none;">
+            <div class="row">
+                <div class="col-6">
+                    <label for="people-select" class="form-label">
+                        Number of people
+                    </label>
+                    <select class="form-select" id="people-select">
+                        <option value="1">1 person</option>
+                        <option value="2">2 people</option>
+                        <option value="3">3 people</option>
+                        <option value="4">4 people</option>
+                        <option value="5">5 people</option>
+                    </select>
+                </div>
+
+                <div class="col-6">
+                    <label for="time-select" class="form-label">
+                        Time
+                    </label>
+                    <select class="form-select" id="time-select">
+                        <option value="1">12:30</option>
+                        <option value="2">13:00</option>
+                        <option value="3">13:30</option>
+                        <option value="4">14:00</option>
+                        <option value="5">20:00</option>
+                        <option value="5">20:30</option>
+                        <option value="5">21:00</option>
+                        <option value="5">21:30</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mt-2 mb-4">
+                <label for="zone-select" class="form-label"> Zone </label>
+                <select class="form-select" id="zone-select">
+                    <option value="1" selected disabled hidden>Choose the Area</option>
+                    <option value="1">Inside</option>
+                    <option value="2">Outside</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-danger mx-auto d-block rounded-0 fs-5 ls-2 px-4">BOOK</button>
+        </form>
+
+
+    </section>
+
+    <!-- Book - end -->
+
+    <!-- Footer - Start -->
+    <footer class="container-fluid bg-footer py-5 text-white">
+        <div class="d-flex flex-column justify-content-center align-items-center border-bottom pb-3 mb-3">
+            <a href=""><img src="./images/logo.svg" alt="Logo"
+                    style="height: 48px; width: 48px; filter: invert(1);"></a>
+            <a href="" class="fs-5 nav-link mt-2 text-light portfolio-link">Portfolio</a>
+        </div>
+        <p class="text-center fs-5">&copy; 2025 Taner Talas</p>
+    </footer>
+    <!-- Footer - End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+        flatpickr("#reservation-date", {
+            inline: true,
+            minDate: "today",
+            disableMobile: true,
+            monthSelectorType: "static",
+            yearSelectorType: "static"
+        });
+    </script>
 
 </body>
 
