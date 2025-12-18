@@ -139,7 +139,7 @@ img {
 
 .carousel-item>img {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 56px);
     object-fit: cover;
 }
 
@@ -355,6 +355,10 @@ select:-webkit-autofill {
 
     #myCarousel2,
     #myCarousel2 .carousel-item {
+        height: 50vh;
+    }
+
+    #myCarousel2 .carousel-item > img {
         height: 50vh;
     }
 
