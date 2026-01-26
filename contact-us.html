@@ -1,184 +1,352 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-bs-theme="dark">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Paris Beaubourg</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="./images/icon.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./images/icon.png" sizes="32x32" />
 
-    <meta name="description"
-        content="Discover a modern café in France offering artisan coffee, fresh pastries, and a cozy atmosphere inspired by contemporary French design. Designed and coded by Taner.">
-    <meta name="author" content="Taner Talas">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta
+      name="description"
+      content="Discover a modern café in France offering artisan coffee, fresh pastries, and a cozy atmosphere inspired by contemporary French design. Designed and coded by Taner."
+    />
+    <meta name="author" content="Taner Talas" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Taner’s Paris Beaubourg Café Project">
-    <meta property="og:description"
-        content="Discover a modern café in France offering artisan coffee, fresh pastries, and a cozy atmosphere inspired by contemporary French design.">
-    <meta property="og:url" content="https://tanertalas.github.io/restaurant-promotion">
-    <meta property="og:site_name" content="Taner’s Paris Beaubourg Café Project">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Taner’s Paris Beaubourg Café Project" />
+    <meta
+      property="og:description"
+      content="Discover a modern café in France offering artisan coffee, fresh pastries, and a cozy atmosphere inspired by contemporary French design."
+    />
+    <meta
+      property="og:url"
+      content="https://tanertalas.github.io/restaurant-promotion"
+    />
+    <meta
+      property="og:site_name"
+      content="Taner’s Paris Beaubourg Café Project"
+    />
+    <meta property="og:locale" content="en_US" />
 
-    <link rel="canonical" href="https://tanertalas.github.io/restaurant-promotion/contact-us.html">
+    <link
+      rel="canonical"
+      href="https://tanertalas.github.io/restaurant-promotion/contact-us.html"
+    />
 
     <script type="module">
-        import Lenis from 'https://cdn.jsdelivr.net/npm/lenis@1.3.16/+esm'
+      import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.3.16/+esm";
 
-        const isDesktop = window.matchMedia('(min-width: 768px)').matches
-        let lenis
+      const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+      let lenis;
 
-        if (isDesktop) {
-            lenis = new Lenis({
-                duration: 1,
-                easing: (t) => 1 - Math.pow(1 - t, 4),
-                smoothWheel: true,
-                smoothTouch: false,
-                wheelMultiplier: 0.8,
-            })
+      if (isDesktop) {
+        lenis = new Lenis({
+          duration: 1,
+          easing: (t) => 1 - Math.pow(1 - t, 4),
+          smoothWheel: true,
+          smoothTouch: false,
+          wheelMultiplier: 0.8,
+        });
 
-            function raf(time) {
-                lenis.raf(time)
-                requestAnimationFrame(raf)
-            }
-
-            requestAnimationFrame(raf)
-
-            document.addEventListener('click', (e) => {
-                const link = e.target.closest('a')
-                if (!link) return
-
-                lenis.stop()
-                requestAnimationFrame(() => lenis.start())
-            })
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
         }
-    </script>
-</head>
 
-<body>
+        requestAnimationFrame(raf);
+
+        document.addEventListener("click", (e) => {
+          const link = e.target.closest("a");
+          if (!link) return;
+
+          lenis.stop();
+          requestAnimationFrame(() => lenis.start());
+        });
+      }
+    </script>
+  </head>
+
+  <body>
     <!-- Navigation - Start -->
     <nav class="navbar navbar-expand-md d-md-flex fixed-top bg-dark">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
-                aria-label="Toggle navigation" data-bs-target="#navbar-links">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand col-md-3 order-md-1 me-0 playfair-display-font ls-2" href="./index.html">Paris
-                Beaubourg</a>
-            <div class="collapse d-md-flex col-12 col-md-6 justify-content-center order-3 order-md-2" id="navbar-links">
-                <ul class="navbar-nav flex-row justify-content-around">
-                    <li class="nav-item"> <a class="nav-link" aria-current="page" href="./index.html">Homepage</a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="./menu.html">Menu</a> </li>
-                </ul>
-            </div>
-            <div class="d-md-flex col-md-3 justify-content-md-end order-md-3">
-                <a href="./reservation.html" class="btn btn-danger ls-2 fw-semibold px-3 rounded-0">
-                    BOOK
-                </a>
-            </div>
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          data-bs-target="#navbar-links"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a
+          class="navbar-brand col-md-3 order-md-1 me-0 playfair-display-font ls-2"
+          href="./index.html"
+          >Paris Beaubourg</a
+        >
+        <div
+          class="collapse d-md-flex col-12 col-md-6 justify-content-center order-3 order-md-2"
+          id="navbar-links"
+        >
+          <ul class="navbar-nav flex-row justify-content-around">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html"
+                >Homepage</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">Menu</a>
+            </li>
+          </ul>
         </div>
+        <div class="d-md-flex col-md-3 justify-content-md-end order-md-3">
+          <a
+            href="./reservation.html"
+            class="btn btn-danger ls-2 fw-semibold px-3 rounded-0"
+          >
+            BOOK
+          </a>
+        </div>
+      </div>
     </nav>
     <!-- Navigation - End -->
 
     <!-- Image - Start -->
     <div class="info-hero-container">
-        <img src="./images/contact-us.png" alt="Restaurant Image" class="info-image">
+      <img
+        src="./images/contact-us.png"
+        alt="Restaurant Image"
+        class="info-image"
+      />
     </div>
     <!-- Image - End -->
 
     <!-- Location - Start -->
 
     <section class="container-fluid py-5 text-center" id="info-container">
-        <h1 class="display-5 ls-3 fw-semibold pb-1 playfair-display-font">Info</h1>
-        <address class="fs-5 fw-light text-white">
-            <strong class="playfair-display-font fs-4 fw-normal">Paris Beaubourg Café</strong><br>
-            45 Rue Saint-Martin<br>
-            75004 Paris, France<br><br>
-            <a href="mailto:info@parisbeaubourg.com"
-                class="fw-normal link-light link-underline-opacity-0 fs-5">info@parisbeaubourg.com</a><br><br>
-            tel. <a href="tel:+33682143957" class="fw-normal link-light link-underline-opacity-0 fs-5">+33 6 82 14 39
-                57</a>
-        </address>
+      <h1 class="display-5 ls-3 fw-semibold pb-1 playfair-display-font">
+        Info
+      </h1>
+      <address class="fs-5 fw-light text-white">
+        <strong class="playfair-display-font fs-4 fw-normal"
+          >Paris Beaubourg Café</strong
+        ><br />
+        45 Rue Saint-Martin<br />
+        75004 Paris, France<br /><br />
+        <a
+          href="mailto:info@parisbeaubourg.com"
+          class="fw-normal link-light link-underline-opacity-0 fs-5"
+          >info@parisbeaubourg.com</a
+        ><br /><br />
+        tel.
+        <a
+          href="tel:+33682143957"
+          class="fw-normal link-light link-underline-opacity-0 fs-5"
+          >+33 6 82 14 39 57</a
+        >
+      </address>
     </section>
 
     <!-- Location - End -->
 
     <!-- Contact Us - Start -->
     <section class="container-fluid py-5 bg-white text-dark">
-        <h2 class="display-6 ls-3 fw-normal pb-1 playfair-display-font text-center">Contact Us</h2>
-        <form class="mx-auto" style="max-width: 500px;">
-            <div class="mb-3 text-center">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control mx-auto" id="name" required autocomplete="on">
-            </div>
+      <h2
+        class="display-6 ls-3 fw-normal pb-1 playfair-display-font text-center"
+      >
+        Contact Us
+      </h2>
+      <form class="mx-auto" style="max-width: 500px">
+        <div class="mb-3 text-center">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control mx-auto"
+            id="name"
+            required
+            autocomplete="on"
+          />
+        </div>
 
-            <div class="mb-3 text-center">
-                <label for="surname" class="form-label">Surname</label>
-                <input type="text" class="form-control mx-auto" id="surname" required autocomplete="on">
-            </div>
+        <div class="mb-3 text-center">
+          <label for="surname" class="form-label">Surname</label>
+          <input
+            type="text"
+            class="form-control mx-auto"
+            id="surname"
+            required
+            autocomplete="on"
+          />
+        </div>
 
-            <div class="mb-3 text-center">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control mx-auto" id="email" aria-describedby="emailHelp" required
-                    autocomplete="on">
-                <div id="emailHelp" class="text-secondary">We'll never share your email with anyone else.</div>
-            </div>
+        <div class="mb-3 text-center">
+          <label for="email" class="form-label">Email address</label>
+          <input
+            type="email"
+            class="form-control mx-auto"
+            id="email"
+            aria-describedby="emailHelp"
+            required
+            autocomplete="on"
+          />
+          <div id="emailHelp" class="text-secondary">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
 
-            <div class="mb-3 text-center">
-                <label for="phone" class="form-label">Phone</label>
-                <input type="tel" class="form-control mx-auto" id="phone" required autocomplete="on">
-            </div>
+        <div class="mb-3 text-center">
+          <label for="phone" class="form-label">Phone</label>
+          <input
+            type="tel"
+            class="form-control mx-auto"
+            id="phone"
+            required
+            autocomplete="on"
+          />
+        </div>
 
-            <div class="mb-3 text-center">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control mx-auto" id="message" rows="3" required></textarea>
-            </div>
+        <div class="mb-3 text-center">
+          <label for="message" class="form-label">Message</label>
+          <textarea
+            class="form-control mx-auto"
+            id="message"
+            rows="3"
+            required
+          ></textarea>
+        </div>
 
-            <div class="mb-3 d-flex justify-content-center">
-                <div class="mb-3 form-check ml-auto">
-                    <input type="checkbox" class="form-check-input" id="privacyPolicyCheck" required>
-                    <label class="form-check-label text-secondary" for="privacyPolicyCheck">I have read and consent to
-                        the processing
-                        of my data according to the <a href="./privacy-policy.html" target="_blank"
-                            class="link-dark link-underline-opacity-0">Privacy
-                            Policy</a> disclosure</label>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-danger mx-auto d-block rounded-0 fs-5 ls-2 px-4">SUBMIT</button>
-        </form>
+        <div class="mb-3 d-flex justify-content-center">
+          <div class="mb-3 form-check ml-auto">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="privacyPolicyCheck"
+              required
+            />
+            <label
+              class="form-check-label text-secondary"
+              for="privacyPolicyCheck"
+              >I have read and consent to the processing of my data according to
+              the
+              <a
+                href="./privacy-policy.html"
+                target="_blank"
+                class="link-dark link-underline-opacity-0"
+                >Privacy Policy</a
+              >
+              disclosure</label
+            >
+          </div>
+        </div>
+        <button
+          type="button"
+          class="btn btn-danger mx-auto d-block rounded-0 fs-5 ls-2 px-4"
+          data-bs-toggle="modal"
+          data-bs-target="#reminder"
+        >
+          SUBMIT
+        </button>
+      </form>
     </section>
     <!-- Contact Us - End -->
 
+    <!-- Reminder - modal -->
+    <div
+      class="modal fade"
+      id="reminder"
+      tabindex="-1"
+      aria-labelledby="reminderLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="reminderLabel">Reminder</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              This is a frontend portfolio project. <br />
+              Any buttons in this project do <strong>not</strong> perform real
+              submissions, and no data is stored.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer - Start -->
     <footer class="container-fluid bg-footer py-5 text-white">
-        <div class="d-flex flex-column justify-content-center align-items-center border-bottom pb-3 mb-3">
-            <a href="https://tanertalas.github.io" target="_blank"><img src="./images/logo.svg" alt="Logo"
-                    style="height: 48px; width: 48px; filter: invert(1);"></a>
-            <a href="https://tanertalas.github.io" target="_blank"
-                class="fs-5 nav-link mt-2 text-light portfolio-link">Portfolio</a>
-        </div>
-        <ul class="d-flex justify-content-center gap-3 list-unstyled mb-3">
-            <li><a href="./index.html" class="text-light text-decoration-none">Homepage</a></li>
-            <li><a href="./contact-us.html" class="text-light text-decoration-none">Contact Us</a></li>
-            <li><a href="./menu.html" class="text-light text-decoration-none">Menu</a></li>
-        </ul>
-        <p class="text-center fs-6 opacity-75">&copy; 2025 Taner Talas</p>
+      <div
+        class="d-flex flex-column justify-content-center align-items-center border-bottom pb-3 mb-3"
+      >
+        <a href="https://tanertalas.github.io" target="_blank"
+          ><img
+            src="./images/logo.svg"
+            alt="Logo"
+            style="height: 48px; width: 48px; filter: invert(1)"
+        /></a>
+        <a
+          href="https://tanertalas.github.io"
+          target="_blank"
+          class="fs-5 nav-link mt-2 text-light portfolio-link"
+          >Portfolio</a
+        >
+      </div>
+      <ul class="d-flex justify-content-center gap-3 list-unstyled mb-3">
+        <li>
+          <a href="./index.html" class="text-light text-decoration-none"
+            >Homepage</a
+          >
+        </li>
+        <li>
+          <a href="./contact-us.html" class="text-light text-decoration-none"
+            >Contact Us</a
+          >
+        </li>
+        <li>
+          <a href="./menu.html" class="text-light text-decoration-none">Menu</a>
+        </li>
+      </ul>
+      <p class="text-center fs-6 opacity-75">&copy; 2025 Taner Talas</p>
     </footer>
     <!-- Footer - End -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
