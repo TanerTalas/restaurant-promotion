@@ -1,103 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-bs-theme="dark">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservation | Paris Beaubourg</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="./images/icon.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./images/icon.png" sizes="32x32" />
 
-    <meta name="description"
-        content="Discover a modern café in France offering artisan coffee, fresh pastries, and a cozy atmosphere inspired by contemporary French design. Designed and coded by Taner.">
-    <meta name="author" content="Taner Talas">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta
+      name="description"
+      content="Discover a modern café in France offering artisan coffee, fresh pastries, and a cozy atmosphere inspired by contemporary French design. Designed and coded by Taner."
+    />
+    <meta name="author" content="Taner Talas" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Taner’s Paris Beaubourg Café Project">
-    <meta property="og:description"
-        content="Discover a modern café in France offering artisan coffee, fresh pastries, and a cozy atmosphere inspired by contemporary French design.">
-    <meta property="og:url" content="https://tanertalas.github.io/restaurant-promotion">
-    <meta property="og:site_name" content="Taner’s Paris Beaubourg Café Project">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Taner’s Paris Beaubourg Café Project" />
+    <meta
+      property="og:description"
+      content="Discover a modern café in France offering artisan coffee, fresh pastries, and a cozy atmosphere inspired by contemporary French design."
+    />
+    <meta
+      property="og:url"
+      content="https://tanertalas.github.io/restaurant-promotion"
+    />
+    <meta
+      property="og:site_name"
+      content="Taner’s Paris Beaubourg Café Project"
+    />
+    <meta property="og:locale" content="en_US" />
 
-    <link rel="canonical" href="https://tanertalas.github.io/restaurant-promotion/reservation.html">
+    <link
+      rel="canonical"
+      href="https://tanertalas.github.io/restaurant-promotion/reservation.html"
+    />
 
     <script type="module">
-        import Lenis from 'https://cdn.jsdelivr.net/npm/lenis@1.3.16/+esm'
+      import Lenis from "https://cdn.jsdelivr.net/npm/lenis@1.3.16/+esm";
 
-        const isDesktop = window.matchMedia('(min-width: 768px)').matches
-        let lenis
+      const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+      let lenis;
 
-        if (isDesktop) {
-            lenis = new Lenis({
-                duration: 1,
-                easing: (t) => 1 - Math.pow(1 - t, 4),
-                smoothWheel: true,
-                smoothTouch: false,
-                wheelMultiplier: 0.8,
-            })
+      if (isDesktop) {
+        lenis = new Lenis({
+          duration: 1,
+          easing: (t) => 1 - Math.pow(1 - t, 4),
+          smoothWheel: true,
+          smoothTouch: false,
+          wheelMultiplier: 0.8,
+        });
 
-            function raf(time) {
-                lenis.raf(time)
-                requestAnimationFrame(raf)
-            }
-
-            requestAnimationFrame(raf)
-
-            document.addEventListener('click', (e) => {
-                const link = e.target.closest('a')
-                if (!link) return
-
-                lenis.stop()
-                requestAnimationFrame(() => lenis.start())
-            })
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
         }
-    </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-</head>
 
-<body>
+        requestAnimationFrame(raf);
+
+        document.addEventListener("click", (e) => {
+          const link = e.target.closest("a");
+          if (!link) return;
+
+          lenis.stop();
+          requestAnimationFrame(() => lenis.start());
+        });
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+
+  <body>
     <!-- Navigation - Start -->
     <nav class="navbar navbar-expand-md d-md-flex fixed-top bg-dark">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" aria-expanded="false"
-                aria-label="Toggle navigation" data-bs-target="#navbar-links">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand col-md-3 order-md-1 me-0 playfair-display-font ls-2" href="./index.html">Paris
-                Beaubourg</a>
-            <div class="collapse d-md-flex col-12 col-md-6 justify-content-center order-3 order-md-2" id="navbar-links">
-                <ul class="navbar-nav flex-row justify-content-evenly">
-                    <li class="nav-item"> <a class="nav-link" aria-current="page" href="./index.html">Homepage</a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="./contact-us.html">Contact Us</a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="./menu.html">Menu</a> </li>
-                </ul>
-            </div>
-            <div class="d-md-flex col-md-3 justify-content-md-end order-md-3">
-
-            </div>
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          data-bs-target="#navbar-links"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a
+          class="navbar-brand col-md-3 order-md-1 me-0 playfair-display-font ls-2"
+          href="./index.html"
+          >Paris Beaubourg</a
+        >
+        <div
+          class="collapse d-md-flex col-12 col-md-6 justify-content-center order-3 order-md-2"
+          id="navbar-links"
+        >
+          <ul class="navbar-nav flex-row justify-content-evenly">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html"
+                >Homepage</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact-us.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">Menu</a>
+            </li>
+          </ul>
         </div>
+        <div class="d-md-flex col-md-3 justify-content-md-end order-md-3"></div>
+      </div>
     </nav>
     <!-- Navigation - End -->
 
     <!-- Hero - start -->
     <div class="reserv-hero-container">
-        <img src="./images/slide-2.jpg" alt="Restaurant Image" class="restourant-image">
+      <img
+        src="./images/slide-2.jpg"
+        alt="Restaurant Image"
+        class="restourant-image"
+      />
     </div>
 
-    <section class="container-fluid py-5 text-center bg-white" id="book-container">
-        <h1 class="display-5 ls-3 fw-semibold pb-1 playfair-display-font text-dark">Book a Table</h1>
-        <p class="fs-3 fw-light opacity-75 text-dark">Secure your spot and enjoy an unforgettable dining experience.
-        </p>
+    <section
+      class="container-fluid py-5 text-center bg-white"
+      id="book-container"
+    >
+      <h1
+        class="display-5 ls-3 fw-semibold pb-1 playfair-display-font text-dark"
+      >
+        Book a Table
+      </h1>
+      <p class="fs-3 fw-light opacity-75 text-dark">
+        Secure your spot and enjoy an unforgettable dining experience.
+      </p>
     </section>
 
     <!-- Hero - end -->
@@ -105,89 +155,152 @@
     <!-- Book - start -->
 
     <section class="container-fluid reservation-calendar bg-white pb-5">
-        <h3 class="fs-3 ls-1 mb-3 text-dark fw-normal text-center">Select a Date</h3>
+      <h3 class="fs-3 ls-1 mb-3 text-dark fw-normal text-center">
+        Select a Date
+      </h3>
 
-        <form class="book-form text-dark p-2">
-            <input type="text" id="reservation-date" style="display: none;">
-            <div class="row">
-                <div class="col-6">
-                    <label for="people-select" class="form-label">
-                        Number of people
-                    </label>
-                    <select class="form-select" id="people-select">
-                        <option value="1">1 person</option>
-                        <option value="2">2 people</option>
-                        <option value="3">3 people</option>
-                        <option value="4">4 people</option>
-                        <option value="5">5 people</option>
-                    </select>
-                </div>
+      <form class="book-form text-dark p-2">
+        <input type="text" id="reservation-date" style="display: none" />
+        <div class="row">
+          <div class="col-6">
+            <label for="people-select" class="form-label">
+              Number of people
+            </label>
+            <select class="form-select" id="people-select">
+              <option value="1">1 person</option>
+              <option value="2">2 people</option>
+              <option value="3">3 people</option>
+              <option value="4">4 people</option>
+              <option value="5">5 people</option>
+            </select>
+          </div>
 
-                <div class="col-6">
-                    <label for="time-select" class="form-label">
-                        Time
-                    </label>
-                    <select class="form-select" id="time-select">
-                        <option value="1">12:30</option>
-                        <option value="2">13:00</option>
-                        <option value="3">13:30</option>
-                        <option value="4">14:00</option>
-                        <option value="5">20:00</option>
-                        <option value="5">20:30</option>
-                        <option value="5">21:00</option>
-                        <option value="5">21:30</option>
-                    </select>
-                </div>
-            </div>
-            <div class="mt-2 mb-4">
-                <label for="zone-select" class="form-label"> Zone </label>
-                <select class="form-select" id="zone-select">
-                    <option value="1" selected disabled hidden>Choose the Area</option>
-                    <option value="1">Inside</option>
-                    <option value="2">Outside</option>
-                </select>
-            </div>
-            <button type="submit" class="btn btn-danger mx-auto d-block rounded-0 fs-5 ls-2 px-4">BOOK</button>
-        </form>
-
-
+          <div class="col-6">
+            <label for="time-select" class="form-label"> Time </label>
+            <select class="form-select" id="time-select">
+              <option value="1">12:30</option>
+              <option value="2">13:00</option>
+              <option value="3">13:30</option>
+              <option value="4">14:00</option>
+              <option value="5">20:00</option>
+              <option value="5">20:30</option>
+              <option value="5">21:00</option>
+              <option value="5">21:30</option>
+            </select>
+          </div>
+        </div>
+        <div class="mt-2 mb-4">
+          <label for="zone-select" class="form-label"> Zone </label>
+          <select class="form-select" id="zone-select">
+            <option value="1" selected disabled hidden>Choose the Area</option>
+            <option value="1">Inside</option>
+            <option value="2">Outside</option>
+          </select>
+        </div>
+        <button
+          type="button"
+          class="btn btn-danger mx-auto d-block rounded-0 fs-5 ls-2 px-4"
+          data-bs-toggle="modal"
+          data-bs-target="#reminder"
+        >
+          BOOK
+        </button>
+      </form>
     </section>
 
     <!-- Book - end -->
 
+    <!-- Reminder - modal -->
+    <div
+      class="modal fade"
+      id="reminder"
+      tabindex="-1"
+      aria-labelledby="reminderLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="reminderLabel">Reminder</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              This is a frontend portfolio project. <br />
+              Any buttons in this project do <strong>not</strong> perform real
+              submissions, and no data is stored.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Footer - Start -->
     <footer class="container-fluid bg-footer py-5 text-white">
-        <div class="d-flex flex-column justify-content-center align-items-center border-bottom pb-3 mb-3">
-            <a href="https://tanertalas.github.io" target="_blank"><img src="./images/logo.svg" alt="Logo"
-                    style="height: 48px; width: 48px; filter: invert(1);"></a>
-            <a href="https://tanertalas.github.io" target="_blank"
-                class="fs-5 nav-link mt-2 text-light portfolio-link">Portfolio</a>
-        </div>
-        <ul class="d-flex justify-content-center gap-3 list-unstyled mb-3">
-            <li><a href="./index.html" class="text-light text-decoration-none">Homepage</a></li>
-            <li><a href="./contact-us.html" class="text-light text-decoration-none">Contact Us</a></li>
-            <li><a href="./menu.html" class="text-light text-decoration-none">Menu</a></li>
-        </ul>
-        <p class="text-center fs-6 opacity-75">&copy; 2025 Taner Talas</p>
+      <div
+        class="d-flex flex-column justify-content-center align-items-center border-bottom pb-3 mb-3"
+      >
+        <a href="https://tanertalas.github.io" target="_blank"
+          ><img
+            src="./images/logo.svg"
+            alt="Logo"
+            style="height: 48px; width: 48px; filter: invert(1)"
+        /></a>
+        <a
+          href="https://tanertalas.github.io"
+          target="_blank"
+          class="fs-5 nav-link mt-2 text-light portfolio-link"
+          >Portfolio</a
+        >
+      </div>
+      <ul class="d-flex justify-content-center gap-3 list-unstyled mb-3">
+        <li>
+          <a href="./index.html" class="text-light text-decoration-none"
+            >Homepage</a
+          >
+        </li>
+        <li>
+          <a href="./contact-us.html" class="text-light text-decoration-none"
+            >Contact Us</a
+          >
+        </li>
+        <li>
+          <a href="./menu.html" class="text-light text-decoration-none">Menu</a>
+        </li>
+      </ul>
+      <p class="text-center fs-6 opacity-75">&copy; 2025 Taner Talas</p>
     </footer>
     <!-- Footer - End -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script>
-        flatpickr("#reservation-date", {
-            inline: true,
-            minDate: "today",
-            disableMobile: true,
-            monthSelectorType: "static",
-            yearSelectorType: "static"
-        });
+      flatpickr("#reservation-date", {
+        inline: true,
+        minDate: "today",
+        disableMobile: true,
+        monthSelectorType: "static",
+        yearSelectorType: "static",
+      });
     </script>
-
-</body>
-
+  </body>
 </html>
