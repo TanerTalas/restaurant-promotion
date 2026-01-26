@@ -114,7 +114,6 @@ img {
 .fade-up {
     opacity: 0;
     transform: translateY(24px);
-    /* hafif aşağıdan */
     transition: opacity 0.8s ease, transform 0.8s ease;
     will-change: opacity, transform;
 }
@@ -125,10 +124,6 @@ img {
 }
 
 /* ----------- general settings - End ----------- */
-
-
-
-
 
 /* ----------- Main Page - Start ----------- */
 
