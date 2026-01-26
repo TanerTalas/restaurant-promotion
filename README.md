@@ -24,7 +24,7 @@ The focus is on clean layouts, modern typography, and a minimal yet elegant user
 - Smooth scrolling experience powered by Lenis
 - Date selection functionality implemented with Flatpickr
 
-🔗 **Live Demo**: [tanertalas.github.io/restaurant-promotion](https://tanertalas.github.io/restaurant-promotion)
+🔗 **Live Demo**: [tanertalas.github.io/Paris-Beaubourg/](https://tanertalas.github.io/Paris-Beaubourg/)
 
 ---
 
@@ -52,13 +52,7 @@ Odak noktası, temiz düzenler, modern tipografi ve minimalist ama zarif bir kul
 - Lenis tarafından desteklenen akıcı kaydırma deneyimi
 - Flatpickr ile uygulanan tarih seçimi işlevi
 
-🔗 **Canlı Site**: [tanertalas.github.io/restaurant-promotion](https://tanertalas.github.io/restaurant-promotion)
-
----
-
-## 📸 Preview / Önizleme
-
-Screenshots will be added later on.
+🔗 **Canlı Site**: [tanertalas.github.io/Paris-Beaubourg/](https://tanertalas.github.io/Paris-Beaubourg/)
 
 ---
 
